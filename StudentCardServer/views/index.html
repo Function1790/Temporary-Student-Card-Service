@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <img src="http://localhost:3000/?studentID=20220024" style="display:none">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>임시학생증</title>
+</head>
+
+<body>
+    <div class="mainContent">
+        <div class="card">
+            <div class="header">
+                <div class="header-content">
+                    <div class="school-name">서령고등학교</div>
+                    <div class="title">임시학생증</div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="iconWrap">
+                    <img src="/img/ssr.jpg" alt="user">
+                </div>
+                <div class="dataWrap">
+                    <div class="dataContent">
+                        <div class="dataName">이름</div>
+                        <div class="dataValue">{{name}}</div>
+                    </div>
+                    <div class="dataContent">
+                        <div class="dataName">학번</div>
+                        <div class="dataValue">{{studentID}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="dataViewer">
+                    <div class="barcode-wrap">
+                        <img id="barcode" src="http://localhost:3000/static/barcode.png" alt="바코드">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
