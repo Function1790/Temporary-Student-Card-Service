@@ -8,6 +8,10 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     studentID = flask.request.args.get('studentID')
+
+    if studentID==None:
+        return f'<img src="/static/barcode.png"></img>'
+    
     barc = Code128(studentID, writer= ImageWriter())
     barc.save("./static/barcode")
 

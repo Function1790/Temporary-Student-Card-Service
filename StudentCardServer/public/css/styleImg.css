@@ -106,7 +106,7 @@ body {
     flex-direction: column;
     width: 100%;
     padding: 10px;
-    padding-top: 20%;
+    padding-top: 0%;
 }
 
 .dataContent {
@@ -117,7 +117,7 @@ body {
 }
 
 .dataContent>* {
-    font-size: 25px;
+    font-size: 15px;
     font-weight: 500;
 }
 
