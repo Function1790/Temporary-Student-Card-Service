@@ -30,10 +30,11 @@ async function renderFile(path, replaceItems = {}) {
 }
 
 app.get('/', async(req, res) => {
+    const body = req.query
     res.send(await renderFile('views/index.html', {
-        'name': '이이이',
-        'studentID': '2333',
-        'DBindex':'00000000'
+        'name': body.name,
+        'studentID': body.id,
+        'DBindex': body.dbindex
     }))
 })
 

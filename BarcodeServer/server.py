@@ -13,7 +13,7 @@ def home():
         return f'<img src="/static/barcode.png"></img>'
     
     barc = Code128(studentID, writer= ImageWriter())
-    barc.save("./static/barcode")
+    barc.save("./static/barcode", {"module_width":1, "module_height":30, "font_size": 1, "write_text": False})
 
     return f'<img src="/static/barcode.png"></img>'
 
