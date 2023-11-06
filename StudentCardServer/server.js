@@ -5,6 +5,9 @@ const fs = require('fs')
 app.use(express.static('public'))
 app.use('/views', express.static('views'))
 
+app.use(express.json()); 
+app.use(express.urlencoded( {extended : false } ));
+
 const print = (data) => console.log(data)
 
 async function readFile(path) {
@@ -38,5 +41,16 @@ app.get('/', async(req, res) => {
     }))
 })
 
+app.get('/login', async(req, res) => {
+    res.send(await renderFile('views/login.html'))
+})
+
+
+app.post('/login-check', async(req, res) => {
+    const body = req.query
+    if(body.name=='root'){
+        res.send(await renderFile('views/login.html'))
+    }
+})
 
 app.listen(5500, () => console.log('Server run https://localhost:5500'))
